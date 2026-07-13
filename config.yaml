@@ -1,0 +1,233 @@
+# =============================================================================
+# CLIP Cultural Alignment Project — Master Configuration
+# =============================================================================
+
+# --- Models ---
+models:
+  openclip:
+    repo_id: "laion/CLIP-ViT-B-32-laion2B-s34B-b79K"
+    embed_dim: 512
+    short_name: "openclip"
+  siglip2:
+    repo_id: "google/siglip2-base-patch16-224"
+    embed_dim: 768
+    short_name: "siglip2"
+
+# --- Dataset ---
+dataset:
+  repo_id: "MLap/GeoDE"
+  images_per_class_per_region: 50  # 10 classes × 6 regions × 50 = 3000 images
+
+# --- GeoDE Regions ---
+regions:
+  - "WestAsia"
+  - "Africa"
+  - "EastAsia"
+  - "SouthEastAsia"
+  - "Americas"
+  - "Europe"
+
+# IMPORTANT — "West" = Europe ONLY.
+# GeoDE's "Americas" region covers Argentina, Colombia, Mexico (Latin America),
+# NOT the "North America / Europe" that the bias literature refers to as
+# traditionally over-represented in web-scraped training data.
+# GeoDE paper confirms: Europe achieves the highest regional accuracy (85.8%),
+# consistent with the Western-centric bias narrative.
+western_regions: ["Europe"]
+nonwestern_regions: ["WestAsia", "Africa", "EastAsia", "SouthEastAsia", "Americas"]
+
+# --- Cultural Concept Taxonomy ---
+# Source: GeoDE Table 4, CLIP ViT-B/32 accuracy (all 40 classes, ascending)
+# Tier 2 = culturally embedded (bottom-5 by accuracy)
+# Tier 1 = culturally universal (top-5 by accuracy)
+
+geode_accuracies:
+  # Full table for reference (from GeoDE paper Table 4)
+  dustbin: 37
+  medicine: 54
+  "cleaning equipment": 59
+  spices: 63
+  house: 63
+  tree: 68
+  "waste container": 69
+  candle: 71
+  toy: 73
+  backyard: 74
+  fence: 75
+  streetlight: 76
+  stall: 76
+  lighter: 77
+  stove: 78
+  jug: 85
+  "front door": 85
+  "hand soap": 86
+  "plate of food": 88
+  truck: 88
+  "light fixture": 88
+  wheelbarrow: 89
+  storefront: 89
+  toothpaste: 90
+  toothbrush: 90
+  flag: 91
+  "religious building": 92
+  bicycle: 92
+  "road sign": 93
+  hat: 93
+  "cooking pot": 95
+  boat: 95
+  hairbrush: 95
+  car: 96
+  monument: 96
+  dog: 96
+  bag: 96
+  chair: 97
+  bus: 97
+  "light switch": 98
+
+# Selected 10 classes (bottom-5 / top-5 by accuracy)
+tier2_concepts:  # Culturally Embedded
+  - "dustbin"
+  - "medicine"
+  - "cleaning equipment"
+  - "spices"
+  - "house"
+
+tier1_concepts:  # Culturally Universal
+  - "light switch"
+  - "bus"
+  - "chair"
+  - "car"
+  - "bag"
+
+all_concepts:
+  - "dustbin"
+  - "medicine"
+  - "cleaning equipment"
+  - "spices"
+  - "house"
+  - "light switch"
+  - "bus"
+  - "chair"
+  - "car"
+  - "bag"
+
+# Taxonomy thresholds (for sensitivity analysis)
+taxonomy:
+  accuracy_threshold: 70  # below this → Tier 2 candidate
+  variance_threshold: 15  # inter-region accuracy variance in pp → Tier 2 candidate
+  sensitivity_percentiles: [10, 15, 20, 25]  # for threshold robustness check
+
+# --- Languages ---
+# Language selection rationale:
+#   English — baseline (CLIP's dominant training language)
+#   Spanish — matches 4 GeoDE countries: Argentina, Colombia, Mexico (Americas)
+#             and Spain (Europe). Strongest native-language match available.
+#   Arabic  — matches 3 GeoDE countries: Saudi Arabia, UAE (WestAsia)
+#             and Egypt (Africa). Non-Latin script preserves script diversity.
+# NOTE: German and Hindi were in the original proposal but replaced after
+# discovering that GeoDE contains zero images from Germany or India/South Asia.
+languages:
+  - "en"
+  - "es"
+  - "ar"
+
+language_names:
+  en: "English"
+  es: "Spanish"
+  ar: "Arabic"
+
+# --- Prompt Templates ---
+# P1: neutral baseline
+# P2: weak cultural context (adds region)
+# P3: strong cultural context (adds "traditional" + region)
+prompts:
+  en:
+    P1: "A photo of a {concept}"
+    P2: "A photo of a {concept} from {region}"
+    P3: "A traditional {concept} used in {region}"
+  es:
+    P1: "Una foto de {article}{concept}"
+    P2: "Una foto de {article}{concept} de {region}"
+    P3: "{article}{concept} tradicional de {region}"
+  ar:
+    P1: "صورة {concept}"
+    P2: "صورة {concept} من {region}"
+    P3: "{concept} تقليدي يستخدم في {region}"
+
+# Spanish articles (indefinite, matching gender of each concept noun)
+es_articles:
+  "dustbin": "un "
+  "medicine": "un "
+  "cleaning equipment": "un "
+  "spices": "unas "
+  "house": "una "
+  "light switch": "un "
+  "bus": "un "
+  "chair": "una "
+  "car": "un "
+  "bag": "una "
+
+# Spanish concept translations
+es_concepts:
+  "dustbin": "basurero"
+  "medicine": "medicamento"
+  "cleaning equipment": "equipo de limpieza"
+  "spices": "especias"
+  "house": "casa"
+  "light switch": "interruptor de luz"
+  "bus": "autobús"
+  "chair": "silla"
+  "car": "carro"
+  "bag": "bolsa"
+
+# Arabic concept translations
+ar_concepts:
+  "dustbin": "سلة مهملات"
+  "medicine": "دواء"
+  "cleaning equipment": "معدات تنظيف"
+  "spices": "توابل"
+  "house": "منزل"
+  "light switch": "مفتاح إضاءة"
+  "bus": "حافلة"
+  "chair": "كرسي"
+  "car": "سيارة"
+  "bag": "حقيبة"
+
+# Region name translations for prompts
+region_names:
+  en:
+    WestAsia: "West Asia"
+    Africa: "Africa"
+    EastAsia: "East Asia"
+    SouthEastAsia: "Southeast Asia"
+    Americas: "the Americas"
+    Europe: "Europe"
+  es:
+    WestAsia: "Asia Occidental"
+    Africa: "África"
+    EastAsia: "Asia Oriental"
+    SouthEastAsia: "el Sudeste Asiático"
+    Americas: "las Américas"
+    Europe: "Europa"
+  ar:
+    WestAsia: "غرب آسيا"
+    Africa: "أفريقيا"
+    EastAsia: "شرق آسيا"
+    SouthEastAsia: "جنوب شرق آسيا"
+    Americas: "الأمريكتان"
+    Europe: "أوروبا"
+
+# --- Statistical thresholds ---
+stats:
+  alpha: 0.05           # significance level
+  min_images_per_cell: 10  # minimum images per (concept, region) cell
+
+# --- Paths ---
+paths:
+  data_raw: "data/raw"
+  embeddings: "data/embeddings"
+  results: "results"
+  figures: "results/figures"
+  tables: "results/tables"
+  log: "results/log.csv"
+  metadata: "data/raw/metadata.csv"

@@ -1,0 +1,6 @@
+concept,region,language,mean_delta_P1,tier
+chair,Europe,es,0.13911494612693787,Tier1
+chair,WestAsia,es,0.13818977773189545,Tier1
+chair,Europe,ar,0.1375710815191269,Tier1
+chair,EastAsia,es,0.13725122809410095,Tier1
+chair,WestAsia,ar,0.13609042763710022,Tier1

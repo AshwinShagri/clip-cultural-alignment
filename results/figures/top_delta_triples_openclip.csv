@@ -1,0 +1,6 @@
+concept,region,language,mean_delta_P1,tier
+bus,Americas,ar,0.12978500127792358,Tier1
+chair,EastAsia,ar,0.1288301646709442,Tier1
+bus,EastAsia,ar,0.12877696752548218,Tier1
+light switch,Europe,ar,0.12532426416873932,Tier1
+chair,Europe,ar,0.11799198389053345,Tier1

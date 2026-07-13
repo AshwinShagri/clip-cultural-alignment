@@ -1,0 +1,171 @@
+timestamp,phase,model,language,prompt_template,question,concept,region,metric_name,metric_value,p_value,test_type,n_samples,notes
+2026-07-13T19:54:30.554231,Phase1_Taxonomy,openclip,,,,dustbin,,S_west_gap,0.016348993778228738,,,,tier=Tier2 acc=37
+2026-07-13T19:54:30.554745,Phase1_Taxonomy,openclip,,,,medicine,,S_west_gap,-0.04062928557395934,,,,tier=Tier2 acc=54
+2026-07-13T19:54:30.554745,Phase1_Taxonomy,openclip,,,,cleaning equipment,,S_west_gap,-0.04648586511611941,,,,tier=Tier2 acc=59
+2026-07-13T19:54:30.555262,Phase1_Taxonomy,openclip,,,,spices,,S_west_gap,-0.008047205209732011,,,,tier=Tier2 acc=63
+2026-07-13T19:54:30.555262,Phase1_Taxonomy,openclip,,,,house,,S_west_gap,-0.07290600538253789,,,,tier=Tier2 acc=63
+2026-07-13T19:54:30.555777,Phase1_Taxonomy,openclip,,,,car,,S_west_gap,-0.01744080781936641,,,,tier=Tier1 acc=96
+2026-07-13T19:54:30.555777,Phase1_Taxonomy,openclip,,,,bag,,S_west_gap,-0.04498165845870972,,,,tier=Tier1 acc=96
+2026-07-13T19:54:30.556318,Phase1_Taxonomy,openclip,,,,bus,,S_west_gap,-0.016168284416198775,,,,tier=Tier1 acc=97
+2026-07-13T19:54:30.556318,Phase1_Taxonomy,openclip,,,,chair,,S_west_gap,0.007435441017150879,,,,tier=Tier1 acc=97
+2026-07-13T19:54:30.556891,Phase1_Taxonomy,openclip,,,,light switch,,S_west_gap,-0.019693171977996804,,,,tier=Tier1 acc=98
+2026-07-13T19:54:30.622422,Phase1_Taxonomy,siglip2,,,,dustbin,,S_west_gap,0.020700716972351096,,,,tier=Tier2 acc=37
+2026-07-13T19:54:30.622938,Phase1_Taxonomy,siglip2,,,,medicine,,S_west_gap,-0.020150744915008567,,,,tier=Tier2 acc=54
+2026-07-13T19:54:30.622938,Phase1_Taxonomy,siglip2,,,,cleaning equipment,,S_west_gap,-0.041572415828704856,,,,tier=Tier2 acc=59
+2026-07-13T19:54:30.623451,Phase1_Taxonomy,siglip2,,,,spices,,S_west_gap,0.008530580997467063,,,,tier=Tier2 acc=63
+2026-07-13T19:54:30.623451,Phase1_Taxonomy,siglip2,,,,house,,S_west_gap,-0.05385423898696895,,,,tier=Tier2 acc=63
+2026-07-13T19:54:30.623963,Phase1_Taxonomy,siglip2,,,,car,,S_west_gap,-0.024521028995513894,,,,tier=Tier1 acc=96
+2026-07-13T19:54:30.623963,Phase1_Taxonomy,siglip2,,,,bag,,S_west_gap,-0.03407993316650393,,,,tier=Tier1 acc=96
+2026-07-13T19:54:30.623963,Phase1_Taxonomy,siglip2,,,,bus,,S_west_gap,-0.032316076755523726,,,,tier=Tier1 acc=97
+2026-07-13T19:54:30.624471,Phase1_Taxonomy,siglip2,,,,chair,,S_west_gap,0.003924846649169922,,,,tier=Tier1 acc=97
+2026-07-13T19:54:30.624471,Phase1_Taxonomy,siglip2,,,,light switch,,S_west_gap,-0.015057075023651167,,,,tier=Tier1 acc=98
+2026-07-13T19:54:32.398005,Q1,openclip,,,,,,cross_region_divergence_ttest_p,0.25119840490663026,0.25119840490663026,Welch_ind,10,
+2026-07-13T19:54:32.402010,Q1,siglip2,,,,,,cross_region_divergence_ttest_p,0.5368432861352639,0.5368432861352639,Welch_ind,10,
+2026-07-13T19:54:33.542800,Q2,openclip,es,P1,,,,delta_L_region_paired_p,1.1322226748992524e-11,1.1322226748992524e-11,paired_ttest,6,
+2026-07-13T19:54:33.543951,Q2,openclip,es,P1,,,,delta_L_welch_p,5.462889344839984e-232,5.462889344839984e-232,Welch_ind,3000,
+2026-07-13T19:54:33.548209,Q2,openclip,es,P2,,,,delta_L_region_paired_p,1.1322226748992524e-11,1.1322226748992524e-11,paired_ttest,6,
+2026-07-13T19:54:33.548724,Q2,openclip,es,P2,,,,delta_L_welch_p,5.462889344839984e-232,5.462889344839984e-232,Welch_ind,3000,
+2026-07-13T19:54:33.552385,Q2,openclip,es,P3,,,,delta_L_region_paired_p,3.29595460250083e-08,3.29595460250083e-08,paired_ttest,6,
+2026-07-13T19:54:33.553439,Q2,openclip,es,P3,,,,delta_L_welch_p,1.3729365339848585e-246,1.3729365339848585e-246,Welch_ind,3000,
+2026-07-13T19:54:33.567877,Q2_Confound,openclip,es,,,,,spearman_rho_S_gap_vs_delta,-0.05454545454545454,0.8810361811618526,spearmanr,10,
+2026-07-13T19:54:33.570575,Q2,openclip,ar,P1,,,,delta_L_region_paired_p,4.995832839039585e-06,4.995832839039585e-06,paired_ttest,6,
+2026-07-13T19:54:33.571652,Q2,openclip,ar,P1,,,,delta_L_welch_p,1.2699430193801273e-203,1.2699430193801273e-203,Welch_ind,3000,
+2026-07-13T19:54:33.575422,Q2,openclip,ar,P2,,,,delta_L_region_paired_p,4.995828739629787e-06,4.995828739629787e-06,paired_ttest,6,
+2026-07-13T19:54:33.575940,Q2,openclip,ar,P2,,,,delta_L_welch_p,1.269882195901838e-203,1.269882195901838e-203,Welch_ind,3000,
+2026-07-13T19:54:33.580163,Q2,openclip,ar,P3,,,,delta_L_region_paired_p,0.0002012322850475145,0.0002012322850475145,paired_ttest,6,
+2026-07-13T19:54:33.580678,Q2,openclip,ar,P3,,,,delta_L_welch_p,9.468256492726401e-59,9.468256492726401e-59,Welch_ind,3000,
+2026-07-13T19:54:33.584898,Q2_Confound,openclip,ar,,,,,spearman_rho_S_gap_vs_delta,0.29696969696969694,0.40470167127015705,spearmanr,10,
+2026-07-13T19:54:33.687268,Q2,siglip2,es,P1,,,,delta_L_region_paired_p,5.1384073558383864e-08,5.1384073558383864e-08,paired_ttest,6,
+2026-07-13T19:54:33.688367,Q2,siglip2,es,P1,,,,delta_L_welch_p,8.230246808007331e-104,8.230246808007331e-104,Welch_ind,3000,
+2026-07-13T19:54:33.692875,Q2,siglip2,es,P2,,,,delta_L_region_paired_p,5.1384073558383864e-08,5.1384073558383864e-08,paired_ttest,6,
+2026-07-13T19:54:33.694037,Q2,siglip2,es,P2,,,,delta_L_welch_p,8.230246808007331e-104,8.230246808007331e-104,Welch_ind,3000,
+2026-07-13T19:54:33.698544,Q2,siglip2,es,P3,,,,delta_L_region_paired_p,0.0007717439748583055,0.0007717439748583055,paired_ttest,6,
+2026-07-13T19:54:33.699571,Q2,siglip2,es,P3,,,,delta_L_welch_p,3.047970175328571e-48,3.047970175328571e-48,Welch_ind,3000,
+2026-07-13T19:54:33.704637,Q2_Confound,siglip2,es,,,,,spearman_rho_S_gap_vs_delta,0.2121212121212121,0.5563057751029299,spearmanr,10,
+2026-07-13T19:54:33.707799,Q2,siglip2,ar,P1,,,,delta_L_region_paired_p,7.962931989852605e-08,7.962931989852605e-08,paired_ttest,6,
+2026-07-13T19:54:33.708379,Q2,siglip2,ar,P1,,,,delta_L_welch_p,5.8559877095243945e-140,5.8559877095243945e-140,Welch_ind,3000,
+2026-07-13T19:54:33.712212,Q2,siglip2,ar,P2,,,,delta_L_region_paired_p,1.100706444380462e-07,1.100706444380462e-07,paired_ttest,6,
+2026-07-13T19:54:33.713316,Q2,siglip2,ar,P2,,,,delta_L_welch_p,6.5585355337360936e-142,6.5585355337360936e-142,Welch_ind,3000,
+2026-07-13T19:54:33.717201,Q2,siglip2,ar,P3,,,,delta_L_region_paired_p,2.0107720656212728e-07,2.0107720656212728e-07,paired_ttest,6,
+2026-07-13T19:54:33.718307,Q2,siglip2,ar,P3,,,,delta_L_welch_p,4.93526964392582e-34,4.93526964392582e-34,Welch_ind,3000,
+2026-07-13T19:54:33.722381,Q2_Confound,siglip2,ar,,,,,spearman_rho_S_gap_vs_delta,-0.10303030303030303,0.7769984634438898,spearmanr,10,
+2026-07-13T19:54:34.873896,Q3,openclip,es,,,,,mean_prompt_gain_P3,0.00016766164626460522,,,,tier=Tier1
+2026-07-13T19:54:34.874484,Q3,openclip,es,,,,,mean_prompt_gain_P3,-0.007632035575807094,,,,tier=Tier2
+2026-07-13T19:54:34.876640,Q3,openclip,es,,,,,prompt_gain_tier_diff_p,0.014517864076441558,0.014517864076441558,Welch_ind,60,
+2026-07-13T19:54:34.883925,Q3,openclip,ar,,,,,mean_prompt_gain_P3,0.03014661481138319,,,,tier=Tier1
+2026-07-13T19:54:34.885253,Q3,openclip,ar,,,,,mean_prompt_gain_P3,0.008423861178259055,,,,tier=Tier2
+2026-07-13T19:54:34.887418,Q3,openclip,ar,,,,,prompt_gain_tier_diff_p,9.16476790711957e-06,9.16476790711957e-06,Welch_ind,60,
+2026-07-13T19:54:34.936134,Q3,siglip2,es,,,,,mean_prompt_gain_P3,0.03352140227410321,,,,tier=Tier1
+2026-07-13T19:54:34.936686,Q3,siglip2,es,,,,,mean_prompt_gain_P3,-0.006363694755979547,,,,tier=Tier2
+2026-07-13T19:54:34.938289,Q3,siglip2,es,,,,,prompt_gain_tier_diff_p,0.00016376410103478836,0.00016376410103478836,Welch_ind,60,
+2026-07-13T19:54:34.946799,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,0.06294065283145756,,,,tier=Tier1
+2026-07-13T19:54:34.947858,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,-0.0245396171308433,,,,tier=Tier2
+2026-07-13T19:54:34.949551,Q3,siglip2,ar,,,,,prompt_gain_tier_diff_p,0.00014307022889077577,0.00014307022889077577,Welch_ind,60,
+2026-07-13T21:02:28.953158,Q1,openclip,,,,,,cross_region_divergence_ttest_p,0.25119840490663026,0.25119840490663026,Welch_ind,10,
+2026-07-13T21:02:28.957122,Q1,siglip2,,,,,,cross_region_divergence_ttest_p,0.5368432861352639,0.5368432861352639,Welch_ind,10,
+2026-07-13T21:02:30.107670,Q2,openclip,es,P1,,,,delta_L_region_paired_p,1.1322226748992524e-11,1.1322226748992524e-11,paired_ttest,6,
+2026-07-13T21:02:30.108698,Q2,openclip,es,P1,,,,delta_L_welch_p,5.462889344839984e-232,5.462889344839984e-232,Welch_ind,3000,
+2026-07-13T21:02:30.111897,Q2,openclip,es,P2,,,,delta_L_region_paired_p,3.831966890397401e-06,3.831966890397401e-06,paired_ttest,6,
+2026-07-13T21:02:30.112975,Q2,openclip,es,P2,,,,delta_L_welch_p,3.105694096176543e-220,3.105694096176543e-220,Welch_ind,3000,
+2026-07-13T21:02:30.116618,Q2,openclip,es,P3,,,,delta_L_region_paired_p,1.0364864821758624e-05,1.0364864821758624e-05,paired_ttest,6,
+2026-07-13T21:02:30.117134,Q2,openclip,es,P3,,,,delta_L_welch_p,1.8693226353823777e-202,1.8693226353823777e-202,Welch_ind,3000,
+2026-07-13T21:02:30.124664,Q2_Confound,openclip,es,,,,,spearman_rho_S_gap_vs_delta,-0.05454545454545454,0.8810361811618526,spearmanr,10,
+2026-07-13T21:02:30.127658,Q2,openclip,ar,P1,,,,delta_L_region_paired_p,4.995832839039585e-06,4.995832839039585e-06,paired_ttest,6,
+2026-07-13T21:02:30.128728,Q2,openclip,ar,P1,,,,delta_L_welch_p,1.2699430193801273e-203,1.2699430193801273e-203,Welch_ind,3000,
+2026-07-13T21:02:30.132361,Q2,openclip,ar,P2,,,,delta_L_region_paired_p,0.00043393230670310437,0.00043393230670310437,paired_ttest,6,
+2026-07-13T21:02:30.132874,Q2,openclip,ar,P2,,,,delta_L_welch_p,1.4961325821646977e-72,1.4961325821646977e-72,Welch_ind,3000,
+2026-07-13T21:02:30.136484,Q2,openclip,ar,P3,,,,delta_L_region_paired_p,0.00020586050730348412,0.00020586050730348412,paired_ttest,6,
+2026-07-13T21:02:30.137527,Q2,openclip,ar,P3,,,,delta_L_welch_p,1.4610296789259475e-48,1.4610296789259475e-48,Welch_ind,3000,
+2026-07-13T21:02:30.142116,Q2_Confound,openclip,ar,,,,,spearman_rho_S_gap_vs_delta,0.29696969696969694,0.40470167127015705,spearmanr,10,
+2026-07-13T21:02:30.200857,Q2,siglip2,es,P1,,,,delta_L_region_paired_p,5.1384073558383864e-08,5.1384073558383864e-08,paired_ttest,6,
+2026-07-13T21:02:30.201908,Q2,siglip2,es,P1,,,,delta_L_welch_p,8.230246808007331e-104,8.230246808007331e-104,Welch_ind,3000,
+2026-07-13T21:02:30.205600,Q2,siglip2,es,P2,,,,delta_L_region_paired_p,0.07109512779062664,0.07109512779062664,paired_ttest,6,
+2026-07-13T21:02:30.206629,Q2,siglip2,es,P2,,,,delta_L_welch_p,1.255404397287232e-24,1.255404397287232e-24,Welch_ind,3000,
+2026-07-13T21:02:30.209803,Q2,siglip2,es,P3,,,,delta_L_region_paired_p,0.02401900930267827,0.02401900930267827,paired_ttest,6,
+2026-07-13T21:02:30.210889,Q2,siglip2,es,P3,,,,delta_L_welch_p,4.0743042006687915e-23,4.0743042006687915e-23,Welch_ind,3000,
+2026-07-13T21:02:30.215089,Q2_Confound,siglip2,es,,,,,spearman_rho_S_gap_vs_delta,0.2121212121212121,0.5563057751029299,spearmanr,10,
+2026-07-13T21:02:30.217788,Q2,siglip2,ar,P1,,,,delta_L_region_paired_p,7.962931989852605e-08,7.962931989852605e-08,paired_ttest,6,
+2026-07-13T21:02:30.218831,Q2,siglip2,ar,P1,,,,delta_L_welch_p,5.8559877095243945e-140,5.8559877095243945e-140,Welch_ind,3000,
+2026-07-13T21:02:30.222494,Q2,siglip2,ar,P2,,,,delta_L_region_paired_p,0.014662566002341783,0.014662566002341783,paired_ttest,6,
+2026-07-13T21:02:30.223023,Q2,siglip2,ar,P2,,,,delta_L_welch_p,2.670118403585348e-37,2.670118403585348e-37,Welch_ind,3000,
+2026-07-13T21:02:30.226925,Q2,siglip2,ar,P3,,,,delta_L_region_paired_p,0.020605046499928604,0.020605046499928604,paired_ttest,6,
+2026-07-13T21:02:30.227949,Q2,siglip2,ar,P3,,,,delta_L_welch_p,6.63621297177989e-10,6.63621297177989e-10,Welch_ind,3000,
+2026-07-13T21:02:30.231769,Q2_Confound,siglip2,ar,,,,,spearman_rho_S_gap_vs_delta,-0.10303030303030303,0.7769984634438898,spearmanr,10,
+2026-07-13T21:02:31.342303,Q3,openclip,es,,,,,mean_prompt_gain_P3,-0.00897730779252015,,,,tier=Tier1
+2026-07-13T21:02:31.343014,Q3,openclip,es,,,,,mean_prompt_gain_P3,-0.012265452769740174,,,,tier=Tier2
+2026-07-13T21:02:31.345220,Q3,openclip,es,,,,,prompt_gain_tier_diff_p,0.46668383508502714,0.46668383508502714,Welch_ind,60,
+2026-07-13T21:02:31.352747,Q3,openclip,ar,,,,,mean_prompt_gain_P3,0.019683159018556277,,,,tier=Tier1
+2026-07-13T21:02:31.353310,Q3,openclip,ar,,,,,mean_prompt_gain_P3,-0.002975799236446619,,,,tier=Tier2
+2026-07-13T21:02:31.355493,Q3,openclip,ar,,,,,prompt_gain_tier_diff_p,7.854579146116288e-05,7.854579146116288e-05,Welch_ind,60,
+2026-07-13T21:02:31.402911,Q3,siglip2,es,,,,,mean_prompt_gain_P3,0.029415659612398788,,,,tier=Tier1
+2026-07-13T21:02:31.403448,Q3,siglip2,es,,,,,mean_prompt_gain_P3,0.012353200341188615,,,,tier=Tier2
+2026-07-13T21:02:31.405600,Q3,siglip2,es,,,,,prompt_gain_tier_diff_p,0.22574271979485938,0.22574271979485938,Welch_ind,60,
+2026-07-13T21:02:31.414154,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,0.04371489198335136,,,,tier=Tier1
+2026-07-13T21:02:31.414737,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,-0.024521167723772427,,,,tier=Tier2
+2026-07-13T21:02:31.416351,Q3,siglip2,ar,,,,,prompt_gain_tier_diff_p,0.00048247353669299064,0.00048247353669299064,Welch_ind,60,
+2026-07-13T21:55:49.500311,Phase1_Taxonomy,openclip,,,,dustbin,,S_west_gap,0.016348993778228738,,,,tier=Tier2 acc=37
+2026-07-13T21:55:49.500311,Phase1_Taxonomy,openclip,,,,medicine,,S_west_gap,-0.04062928557395934,,,,tier=Tier2 acc=54
+2026-07-13T21:55:49.500819,Phase1_Taxonomy,openclip,,,,cleaning equipment,,S_west_gap,-0.04648586511611941,,,,tier=Tier2 acc=59
+2026-07-13T21:55:49.500819,Phase1_Taxonomy,openclip,,,,spices,,S_west_gap,-0.008047205209732011,,,,tier=Tier2 acc=63
+2026-07-13T21:55:49.501333,Phase1_Taxonomy,openclip,,,,house,,S_west_gap,-0.07290600538253789,,,,tier=Tier2 acc=63
+2026-07-13T21:55:49.501333,Phase1_Taxonomy,openclip,,,,car,,S_west_gap,-0.01744080781936641,,,,tier=Tier1 acc=96
+2026-07-13T21:55:49.501845,Phase1_Taxonomy,openclip,,,,bag,,S_west_gap,-0.04498165845870972,,,,tier=Tier1 acc=96
+2026-07-13T21:55:49.501845,Phase1_Taxonomy,openclip,,,,bus,,S_west_gap,-0.016168284416198775,,,,tier=Tier1 acc=97
+2026-07-13T21:55:49.501845,Phase1_Taxonomy,openclip,,,,chair,,S_west_gap,0.007435441017150879,,,,tier=Tier1 acc=97
+2026-07-13T21:55:49.502361,Phase1_Taxonomy,openclip,,,,light switch,,S_west_gap,-0.019693171977996804,,,,tier=Tier1 acc=98
+2026-07-13T21:55:49.565803,Phase1_Taxonomy,siglip2,,,,dustbin,,S_west_gap,0.020700716972351096,,,,tier=Tier2 acc=37
+2026-07-13T21:55:49.566316,Phase1_Taxonomy,siglip2,,,,medicine,,S_west_gap,-0.020150744915008567,,,,tier=Tier2 acc=54
+2026-07-13T21:55:49.566316,Phase1_Taxonomy,siglip2,,,,cleaning equipment,,S_west_gap,-0.041572415828704856,,,,tier=Tier2 acc=59
+2026-07-13T21:55:49.566832,Phase1_Taxonomy,siglip2,,,,spices,,S_west_gap,0.008530580997467063,,,,tier=Tier2 acc=63
+2026-07-13T21:55:49.566832,Phase1_Taxonomy,siglip2,,,,house,,S_west_gap,-0.05385423898696895,,,,tier=Tier2 acc=63
+2026-07-13T21:55:49.567349,Phase1_Taxonomy,siglip2,,,,car,,S_west_gap,-0.024521028995513894,,,,tier=Tier1 acc=96
+2026-07-13T21:55:49.567349,Phase1_Taxonomy,siglip2,,,,bag,,S_west_gap,-0.03407993316650393,,,,tier=Tier1 acc=96
+2026-07-13T21:55:49.567349,Phase1_Taxonomy,siglip2,,,,bus,,S_west_gap,-0.032316076755523726,,,,tier=Tier1 acc=97
+2026-07-13T21:55:49.567349,Phase1_Taxonomy,siglip2,,,,chair,,S_west_gap,0.003924846649169922,,,,tier=Tier1 acc=97
+2026-07-13T21:55:49.568056,Phase1_Taxonomy,siglip2,,,,light switch,,S_west_gap,-0.015057075023651167,,,,tier=Tier1 acc=98
+2026-07-13T21:55:51.262921,Q1,openclip,,,,,,cross_region_divergence_ttest_p,0.25119840490663026,0.25119840490663026,Welch_ind,10,
+2026-07-13T21:55:51.267946,Q1,siglip2,,,,,,cross_region_divergence_ttest_p,0.5368432861352639,0.5368432861352639,Welch_ind,10,
+2026-07-13T21:55:52.431884,Q2,openclip,es,P1,,,,delta_L_region_paired_p,1.1322226748992524e-11,1.1322226748992524e-11,paired_ttest,6,
+2026-07-13T21:55:52.433673,Q2,openclip,es,P1,,,,delta_L_welch_p,5.462889344839984e-232,5.462889344839984e-232,Welch_ind,3000,
+2026-07-13T21:55:52.439564,Q2,openclip,es,P2,,,,delta_L_region_paired_p,3.831966890397401e-06,3.831966890397401e-06,paired_ttest,6,
+2026-07-13T21:55:52.440101,Q2,openclip,es,P2,,,,delta_L_welch_p,3.105694096176543e-220,3.105694096176543e-220,Welch_ind,3000,
+2026-07-13T21:55:52.445814,Q2,openclip,es,P3,,,,delta_L_region_paired_p,1.0364864821758624e-05,1.0364864821758624e-05,paired_ttest,6,
+2026-07-13T21:55:52.446864,Q2,openclip,es,P3,,,,delta_L_welch_p,1.8693226353823777e-202,1.8693226353823777e-202,Welch_ind,3000,
+2026-07-13T21:55:52.455127,Q2_Confound,openclip,es,,,,,spearman_rho_S_gap_vs_delta,-0.05454545454545454,0.8810361811618526,spearmanr,10,
+2026-07-13T21:55:52.458731,Q2_Confound_OLS,openclip,es,,,,,ols_tier2_coefficient,0.052051367938321436,1.410741785881604e-07,ols_regression,60,t=6.01
+2026-07-13T21:55:52.463450,Q2,openclip,ar,P1,,,,delta_L_region_paired_p,4.995832839039585e-06,4.995832839039585e-06,paired_ttest,6,
+2026-07-13T21:55:52.464497,Q2,openclip,ar,P1,,,,delta_L_welch_p,1.2699430193801273e-203,1.2699430193801273e-203,Welch_ind,3000,
+2026-07-13T21:55:52.470668,Q2,openclip,ar,P2,,,,delta_L_region_paired_p,0.00043393230670310437,0.00043393230670310437,paired_ttest,6,
+2026-07-13T21:55:52.471742,Q2,openclip,ar,P2,,,,delta_L_welch_p,1.4961325821646977e-72,1.4961325821646977e-72,Welch_ind,3000,
+2026-07-13T21:55:52.478138,Q2,openclip,ar,P3,,,,delta_L_region_paired_p,0.00020586050730348412,0.00020586050730348412,paired_ttest,6,
+2026-07-13T21:55:52.479318,Q2,openclip,ar,P3,,,,delta_L_welch_p,1.4610296789259475e-48,1.4610296789259475e-48,Welch_ind,3000,
+2026-07-13T21:55:52.484660,Q2_Confound,openclip,ar,,,,,spearman_rho_S_gap_vs_delta,0.29696969696969694,0.40470167127015705,spearmanr,10,
+2026-07-13T21:55:52.485765,Q2_Confound_OLS,openclip,ar,,,,,ols_tier2_coefficient,-0.01883509865123384,0.000321688377048857,ols_regression,60,t=-3.83
+2026-07-13T21:55:52.556680,Q2,siglip2,es,P1,,,,delta_L_region_paired_p,5.1384073558383864e-08,5.1384073558383864e-08,paired_ttest,6,
+2026-07-13T21:55:52.557873,Q2,siglip2,es,P1,,,,delta_L_welch_p,8.230246808007331e-104,8.230246808007331e-104,Welch_ind,3000,
+2026-07-13T21:55:52.564476,Q2,siglip2,es,P2,,,,delta_L_region_paired_p,0.07109512779062664,0.07109512779062664,paired_ttest,6,
+2026-07-13T21:55:52.565555,Q2,siglip2,es,P2,,,,delta_L_welch_p,1.255404397287232e-24,1.255404397287232e-24,Welch_ind,3000,
+2026-07-13T21:55:52.571928,Q2,siglip2,es,P3,,,,delta_L_region_paired_p,0.02401900930267827,0.02401900930267827,paired_ttest,6,
+2026-07-13T21:55:52.573875,Q2,siglip2,es,P3,,,,delta_L_welch_p,4.0743042006687915e-23,4.0743042006687915e-23,Welch_ind,3000,
+2026-07-13T21:55:52.579188,Q2_Confound,siglip2,es,,,,,spearman_rho_S_gap_vs_delta,0.2121212121212121,0.5563057751029299,spearmanr,10,
+2026-07-13T21:55:52.580233,Q2_Confound_OLS,siglip2,es,,,,,ols_tier2_coefficient,-0.03410844077324766,0.0014865175222423723,ols_regression,60,t=-3.34
+2026-07-13T21:55:52.585887,Q2,siglip2,ar,P1,,,,delta_L_region_paired_p,7.962931989852605e-08,7.962931989852605e-08,paired_ttest,6,
+2026-07-13T21:55:52.586988,Q2,siglip2,ar,P1,,,,delta_L_welch_p,5.8559877095243945e-140,5.8559877095243945e-140,Welch_ind,3000,
+2026-07-13T21:55:52.594820,Q2,siglip2,ar,P2,,,,delta_L_region_paired_p,0.014662566002341783,0.014662566002341783,paired_ttest,6,
+2026-07-13T21:55:52.595337,Q2,siglip2,ar,P2,,,,delta_L_welch_p,2.670118403585348e-37,2.670118403585348e-37,Welch_ind,3000,
+2026-07-13T21:55:52.601808,Q2,siglip2,ar,P3,,,,delta_L_region_paired_p,0.020605046499928604,0.020605046499928604,paired_ttest,6,
+2026-07-13T21:55:52.602323,Q2,siglip2,ar,P3,,,,delta_L_welch_p,6.63621297177989e-10,6.63621297177989e-10,Welch_ind,3000,
+2026-07-13T21:55:52.607995,Q2_Confound,siglip2,ar,,,,,spearman_rho_S_gap_vs_delta,-0.10303030303030303,0.7769984634438898,spearmanr,10,
+2026-07-13T21:55:52.608586,Q2_Confound_OLS,siglip2,ar,,,,,ols_tier2_coefficient,-0.027943796437057945,0.012042626515382467,ols_regression,60,t=-2.59
+2026-07-13T21:55:53.801735,Q3,openclip,es,,,,,mean_prompt_gain_P3,-0.00897730779252015,,,,tier=Tier1
+2026-07-13T21:55:53.802918,Q3,openclip,es,,,,,mean_prompt_gain_P3,-0.012265452769740174,,,,tier=Tier2
+2026-07-13T21:55:53.804887,Q3,openclip,es,,,,,prompt_gain_tier_diff_p,0.46668383508502714,0.46668383508502714,Welch_ind,60,
+2026-07-13T21:55:53.812737,Q3,openclip,ar,,,,,mean_prompt_gain_P3,0.019683159018556277,,,,tier=Tier1
+2026-07-13T21:55:53.813828,Q3,openclip,ar,,,,,mean_prompt_gain_P3,-0.002975799236446619,,,,tier=Tier2
+2026-07-13T21:55:53.815789,Q3,openclip,ar,,,,,prompt_gain_tier_diff_p,7.854579146116288e-05,7.854579146116288e-05,Welch_ind,60,
+2026-07-13T21:55:53.863723,Q3,siglip2,es,,,,,mean_prompt_gain_P3,0.029415659612398788,,,,tier=Tier1
+2026-07-13T21:55:53.864762,Q3,siglip2,es,,,,,mean_prompt_gain_P3,0.012353200341188615,,,,tier=Tier2
+2026-07-13T21:55:53.866777,Q3,siglip2,es,,,,,prompt_gain_tier_diff_p,0.22574271979485938,0.22574271979485938,Welch_ind,60,
+2026-07-13T21:55:53.874818,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,0.04371489198335136,,,,tier=Tier1
+2026-07-13T21:55:53.875958,Q3,siglip2,ar,,,,,mean_prompt_gain_P3,-0.024521167723772427,,,,tier=Tier2
+2026-07-13T21:55:53.877670,Q3,siglip2,ar,,,,,prompt_gain_tier_diff_p,0.00048247353669299064,0.00048247353669299064,Welch_ind,60,
