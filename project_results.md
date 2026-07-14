@@ -268,7 +268,7 @@ We ran `Δ_L ~ Intercept + is_Tier2 + cos_en` to control for how well English te
 
 ---
 
-# Limitations (Be Honest About These)
+# Limitations 
 
 1. **n = 5 concepts per tier** → Q1 is underpowered. We'd need ~15–20 per tier for reliable significance.
 2. **Only 2 non-English languages** — results may not generalize to Hindi, Chinese, Swahili, etc.
