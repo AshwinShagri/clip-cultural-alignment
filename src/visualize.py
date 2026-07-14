@@ -722,7 +722,7 @@ def fig9_summary_dashboard(cfg: dict, figures_dir: Path, models: list[str]):
         "    for culturally embedded categories\n\n"
         "Q2 (Alignment Gap):\n"
         "  • Δ_L significantly larger for Tier 2\n"
-        "  • Effect holds across DE and HI\n"
+        "  • Effect holds across ES and AR\n"
         "  • Spearman ρ confirms S-gap predicts Δ_L\n\n"
         "Q3 (Prompt Intervention):\n"
         "  • P3 reduces gap for Tier 2 (G > 0)\n"
