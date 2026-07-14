@@ -46,7 +46,7 @@ Before looking at results, here's what each metric measures:
 
 ## The Heatmap — S(c, r) per concept × region
 
-![S(c,r) heatmap showing mean pairwise cosine similarity for each concept-region pair across both models. Tier 2 concepts (top) generally have lower S values, meaning images are more diverse.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig1_taxonomy_heatmap.png)
+![S(c,r) heatmap showing mean pairwise cosine similarity for each concept-region pair across both models. Tier 2 concepts (top) generally have lower S values, meaning images are more diverse.](results/figures/fig1_taxonomy_heatmap.png)
 
 ### How to read this:
 - Each cell shows how visually similar images of one concept are within one region
@@ -61,7 +61,7 @@ Before looking at results, here's what each metric measures:
 
 ## Western Coherence Gap — S(West) − S(non-West)
 
-![Bar chart of Western coherence gap per concept. Most bars are negative, meaning non-Western regions actually have more coherent embeddings.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig2_west_gap.png)
+![Bar chart of Western coherence gap per concept. Most bars are negative, meaning non-Western regions actually have more coherent embeddings.](results/figures/fig2_west_gap.png)
 
 ### How to read this:
 - Positive bar = Western (European) images are more coherent than non-Western
@@ -89,7 +89,7 @@ Before looking at results, here's what each metric measures:
 
 ## Sensitivity Analysis — Does the Tier Boundary Matter?
 
-![Sensitivity analysis showing which concepts enter Tier 2 at different accuracy thresholds](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig8_sensitivity.png)
+![Sensitivity analysis showing which concepts enter Tier 2 at different accuracy thresholds](results/figures/fig8_sensitivity.png)
 
 > This shows that our tier assignment is stable: the same 5 concepts stay in Tier 2 across multiple percentile thresholds (10th–25th).
 
@@ -103,7 +103,7 @@ Before looking at results, here's what each metric measures:
 
 ## Δ_L Distribution: Tier 1 vs Tier 2
 
-![Violin plot showing Δ_L distributions for Tier 1 vs Tier 2, split by model and language. Tier 2 consistently has higher Δ_L.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig3_delta_L_violin.png)
+![Violin plot showing Δ_L distributions for Tier 1 vs Tier 2, split by model and language. Tier 2 consistently has higher Δ_L.](results/figures/fig3_delta_L_violin.png)
 
 ### How to read this:
 - Each violin shows the distribution of Δ_L values (one per concept×region cell)
@@ -117,7 +117,7 @@ Before looking at results, here's what each metric measures:
 
 ## Δ_L Heatmap: Where Exactly Is the Gap?
 
-![Heatmap showing Δ_L for each concept × region combination. Red = larger gap.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig4_delta_L_heatmap.png)
+![Heatmap showing Δ_L for each concept × region combination. Red = larger gap.](results/figures/fig4_delta_L_heatmap.png)
 
 ### How to read this:
 - Red cells = large Δ_L = the model's Spanish/Arabic alignment is much worse than English
@@ -155,7 +155,7 @@ Before looking at results, here's what each metric measures:
 
 ## Confound Check: Is the Gap Just Because of Visual Geometry?
 
-![Scatter plot: S_west_gap vs Δ_L. No correlation — the visual coherence gap does NOT predict the alignment gap.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig7_spearman_scatter.png)
+![Scatter plot: S_west_gap vs Δ_L. No correlation — the visual coherence gap does NOT predict the alignment gap.](results/figures/fig7_spearman_scatter.png)
 
 ### How to read this:
 - Each dot is one concept
@@ -191,9 +191,9 @@ We ran `Δ_L ~ Intercept + is_Tier2 + cos_en` to control for how well English te
 ## Prompt Gain Results
 
 ````carousel
-![Prompt gain for Spanish: G(P3) and G(P2) per concept, split by model. Positive = prompt helps close the gap.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig5_prompt_gain_es.png)
+![Prompt gain for Spanish: G(P3) and G(P2) per concept, split by model. Positive = prompt helps close the gap.](results/figures/fig5_prompt_gain_es.png)
 <!-- slide -->
-![Prompt gain for Arabic: G(P3) and G(P2) per concept, split by model. Notable that Tier 2 Arabic G is negative — P3 makes things WORSE.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig5_prompt_gain_ar.png)
+![Prompt gain for Arabic: G(P3) and G(P2) per concept, split by model. Notable that Tier 2 Arabic G is negative — P3 makes things WORSE.](results/figures/fig5_prompt_gain_ar.png)
 ````
 
 ### How to read this:
@@ -219,7 +219,7 @@ We ran `Δ_L ~ Intercept + is_Tier2 + cos_en` to control for how well English te
 
 # Model Comparison: OpenCLIP vs SigLIP 2
 
-![Bar chart comparing Cultural Asymmetry A(L) between models. Both show positive asymmetry, but SigLIP 2 is generally smaller.](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig6_model_comparison.png)
+![Bar chart comparing Cultural Asymmetry A(L) between models. Both show positive asymmetry, but SigLIP 2 is generally smaller.](results/figures/fig6_model_comparison.png)
 
 ### What is A(L)?
 - A(L) = mean Δ_L(Tier 2) − mean Δ_L(Tier 1)
@@ -235,7 +235,7 @@ We ran `Δ_L ~ Intercept + is_Tier2 + cos_en` to control for how well English te
 
 # Summary Dashboard
 
-![Executive summary dashboard showing key results across all research questions](C:/Users/ashwi/.gemini/antigravity-ide/brain/c18f1cb7-6661-444b-96e4-83d995588e25/results_figures/fig9_summary_dashboard.png)
+![Executive summary dashboard showing key results across all research questions](results/figures/fig9_summary_dashboard.png)
 
 ---
 
